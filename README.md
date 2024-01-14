@@ -4,7 +4,7 @@ Generates a PDF receipt from a JSON object.
 
 ## Process
 
-Generates an HTML version of the receipt and converts it to PDF using a headless Chromium browser, using the puppeteer module.
+First, the JSON input object is converted to an HTML version of the receipt. This is then exported to PDF via a headless Chromium browser, using the puppeteer Node.js library.
 
 ## Input
 
