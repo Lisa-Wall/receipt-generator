@@ -8,7 +8,7 @@ Generates an HTML version of the receipt and converts it to PDF using a headless
 
 ## Input
 
-The expected input is a JSON object in the following format:
+A JSON object in the following format:
 
 ```
 {
@@ -31,4 +31,7 @@ The expected input is a JSON object in the following format:
 ## Output
 
 Produces a PDF receipt. Sample:
+
+<img src="https://lcchomes.com/images/SampleReceipt.jpg"
+/>
 
