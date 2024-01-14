@@ -27,3 +27,8 @@ The expected input is a JSON object in the following format:
     "receiptTitle": "Rent Receipt"
 }
 ```
+
+## Output
+
+Produces a PDF receipt. Sample:
+
