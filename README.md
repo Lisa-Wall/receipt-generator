@@ -34,5 +34,5 @@ A JSON object in the following format:
 
 Produces a PDF receipt. Example:
 
-<img src="https://lcchomes.com/images/SampleReceipt.jpg" />
+<img src="https://lcchomes.com/images/SampleReceipt1.jpg" />
 
