@@ -1,9 +1,14 @@
 .receipt
 {
-    border: 1.4px solid black;
+    font-size:larger;
+    border: 1px solid black;
+    padding: 20px 40px 40px 40px;
 }
 
 .receipt-field
 {
-    border-bottom: 1.4px solid gray;
+    border-bottom: 1px solid black;
+    font-family: 'Courier New';
+    align-self: flex-end;
 }
+

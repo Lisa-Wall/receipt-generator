@@ -14,24 +14,25 @@ A JSON object in the following format:
 {
     "receivedFrom": "Sample Tenant",
     "amount": 745,
+    "dateOfIssue": new Date(),
     "receivedBy": 
-    [
-        {
-            "name": "Sample Landlord",
-            "signatureURL": "./images/signature-landlord.jpg"
-        }
-    ],
+    {
+        "name": "Sample Landlord",
+        "title": "(landlord)",
+        "signatureImage": "signature-landlord.jpg"
+    },
     "paymentMenthod": "eTransfer",
-    "logoURL": "../images/logo-lcchomes.png",
-    "dateOfIssue": "2024-01-13",
-    "receiptTitle": "Rent Receipt"
+    "receiptTitle": "Rent Receipt",
+    "logoFilename": "logo.png",
+    "month": "January, 2024",
+    "paymentMethod": "eTransfer",
+    "rentAddress": "3-300 Tenant Avenue, Ottawa ON, K1L 7C5"
 }
 ```
 
 ## Output
 
-Produces a PDF receipt. Sample:
+Produces a PDF receipt. Example:
 
-<img src="https://lcchomes.com/images/SampleReceipt.jpg"
-/>
+<img src="https://lcchomes.com/images/SampleReceipt.jpg" />
 
