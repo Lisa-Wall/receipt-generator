@@ -19,7 +19,7 @@ First, the JSON input object is converted to an HTML version of the receipt. Thi
 
 ## Input
 
-A JSON object in the following format:
+A structure containing the receipt fields:
 
 ```
 {
@@ -43,7 +43,7 @@ Produces a PDF receipt. Example:
 
 <img src="https://lcchomes.com/images/SampleReceipt1.jpg" />
 
-## Technical Considerations
+## Puppeteer image handling
 
 * Puppeteer purposely blocks local resource files for security reasons. This means we cannot load images from a local folder from within the html markup in the usual way, ex: `<img src="filePath/fileName.jpg">`. This will be blocked.
 
@@ -59,5 +59,6 @@ Produces a PDF receipt. Example:
 Note: Method c) is being used in this project.
 
 # Image format and storage considerations
-    * I will probably move to storing images in a database, already base64-encoded. Right now I'm reading them in from the file system and converting them within this module.   
-    * Note that images are optional on the receipt. If used, they would tend to be quite small (ex: logo, signature).
+
+* I will probably move to storing images in a database, already base64-encoded. Right now I'm reading them in from the file system and converting them within this module.   
+* Note that images are optional on the receipt. If used, they would tend to be quite small (ex: logo, signature).
