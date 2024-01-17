@@ -7,35 +7,37 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <div class="container mt-5 receipt" style="background-image: url(https://www.lcchomes.com/images/${this.receivedBy['signatureImage']});background-position: right bottom;background-repeat: no-repeat;">
+        <div class="container mt-5 receipt" style="position:relative">
+            <img src="data:image/jpeg;base64,${this.base64Img_Signature}" style="position: absolute;bottom: 0; right: 0;z-index: -1"/>
             <div class="row" style="border-bottom: 1px solid black;">
-              <div class="col-2" style="padding-bottom:8px"><img src="https://www.lcchomes.com/images/${this.logoFilename}" /></div>
-              <div class="col display-4" style="align-self: flex-end;white-space: nowrap">${this.receiptTitle.toUpperCase()}</div>
-              <div class="col" style="align-self: flex-end;text-align:right">${this.dateOfIssue}</div>
+              <div class="col-2" style="padding-bottom:8px;display:${this.displayLogo}"><img src="data:image/jpeg;base64,${this.base64Img_Logo}" /></div>
+              <div class="col display-4" style="align-self: flex-end;white-space: nowrap">${receipt.receiptTitle.toUpperCase()}</div>
+              <div class="col" style="align-self: flex-end;text-align:right">${receipt.dateOfIssue}</div>
             </div>
             <br />
             <div class="row">
                 <div class="col-3">Received from:</div>
-                <div class="col receipt-field">${this.receivedFrom}</div>
+                <div class="col receipt-field">${receipt.receivedFrom}</div>
                 <div class="col-1" style="text-align:right">$</div>
-                <div class="col-2 receipt-field">${this.amount}</div>
+                <div class="col-2 receipt-field">${receipt.amount}</div>
             </div>
             <div class="row">
                 <div class="col-3">Month:</div>
-                <div class="col receipt-field">${this.month}</div>
+                <div class="col receipt-field">${receipt.month}</div>
             </div>
             <div class="row">
                 <div class="col-3">Rental address:</div>
-                <div class="col receipt-field">${this.rentAddress}</div>
+                <div class="col receipt-field">${receipt.rentalAddress}</div>
             </div>
             <div class="row">
                 <div class="col-3">Paid by:</div>
-                <div class="col receipt-field">${this.paymentMethod}</div>
+                <div class="col receipt-field">${receipt.paymentMethod}</div>
             </div>
             <div class="row">
                 <div class="col-3" style="align-self: flex-end;">Received by:</div>
-                <div class="col receipt-field">${this.receivedBy['name']} ${this.receivedBy['title']}</div>
+                <div class="col receipt-field">${receipt.receivedBy_Name} ${receipt.receivedBy_Title}</div>
             </div>
+            
         </div>
     </body>
 </html>
